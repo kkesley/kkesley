@@ -4,7 +4,7 @@ import BannerImage from 'assets/developer.jpg'
 import './Banner.scss'
 
 const Banner = () => (
-    <section id="section__banner" className="hero is-fullheight-with-navbar">
+    <section id="section__banner" className="section hero is-fullheight-with-navbar">
         <div className="hero-body">
             <div className="container">
                 <div class="columns is-mobile is-vcentered">
