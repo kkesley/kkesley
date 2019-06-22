@@ -1,0 +1,15 @@
+.image-overlay-container {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    img {
+        height: 330px;
+    }
+    .is-overlay{
+        background-color: transparent;
+        &:hover{
+            background-color: black;
+            opacity: 0.4;
+        }
+    }
+}

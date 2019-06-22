@@ -2,14 +2,14 @@ import React, { memo } from 'react'
 
 import Banner from './Banner'
 import Service from './Service'
-import Stack from './Stack'
+import Project from './Project'
 
 const Home = () => {
   return (
     <React.Fragment id="page__home">
       <Banner />
       <Service />
-      <Stack />
+      <Project />
     </React.Fragment>
   );
 }
