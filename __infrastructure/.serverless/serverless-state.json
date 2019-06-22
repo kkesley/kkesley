@@ -1,0 +1,343 @@
+{
+  "service": {
+    "service": "kkesley",
+    "serviceObject": {
+      "name": "kkesley"
+    },
+    "provider": {
+      "stage": "dev",
+      "region": "ap-southeast-2",
+      "variableSyntax": "\\${([ ~:a-zA-Z0-9._@'\",\\-\\/\\(\\)*]+?)}",
+      "name": "aws",
+      "profile": "vo",
+      "versionFunctions": true,
+      "remoteFunctionData": null,
+      "compiledCloudFormationTemplate": {
+        "AWSTemplateFormatVersion": "2010-09-09",
+        "Description": "The AWS CloudFormation template for this Serverless application",
+        "Resources": {
+          "ServerlessDeploymentBucket": {
+            "Type": "AWS::S3::Bucket",
+            "Properties": {
+              "BucketEncryption": {
+                "ServerSideEncryptionConfiguration": [
+                  {
+                    "ServerSideEncryptionByDefault": {
+                      "SSEAlgorithm": "AES256"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "FrontPageWebsiteBucket": {
+            "Type": "AWS::S3::Bucket",
+            "Properties": {
+              "WebsiteConfiguration": {
+                "IndexDocument": "index.html",
+                "ErrorDocument": "404.html"
+              }
+            }
+          },
+          "FrontPageCloudFront": {
+            "Type": "AWS::CloudFront::Distribution",
+            "DependsOn": [
+              "FrontPageWebsiteBucket"
+            ],
+            "Properties": {
+              "DistributionConfig": {
+                "Origins": [
+                  {
+                    "DomainName": {
+                      "Fn::Select": [
+                        2,
+                        {
+                          "Fn::Split": [
+                            "/",
+                            {
+                              "Fn::GetAtt": [
+                                "FrontPageWebsiteBucket",
+                                "WebsiteURL"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    "Id": "S3Origin",
+                    "CustomOriginConfig": {
+                      "HTTPPort": "80",
+                      "HTTPSPort": "443",
+                      "OriginProtocolPolicy": "http-only"
+                    }
+                  }
+                ],
+                "CustomErrorResponses": [
+                  {
+                    "ErrorCachingMinTTL": 0,
+                    "ErrorCode": 403,
+                    "ResponseCode": 200,
+                    "ResponsePagePath": "/index.html"
+                  }
+                ],
+                "Aliases": [
+                  "dev.kkesley.com",
+                  "www-dev.kkesley.com"
+                ],
+                "DefaultCacheBehavior": {
+                  "AllowedMethods": [
+                    "GET",
+                    "HEAD"
+                  ],
+                  "Compress": true,
+                  "ForwardedValues": {
+                    "QueryString": true,
+                    "Cookies": {
+                      "Forward": "none"
+                    }
+                  },
+                  "TargetOriginId": "S3Origin",
+                  "ViewerProtocolPolicy": "redirect-to-https"
+                },
+                "Comment": "Distribution of front page website. Need to replaced with the actual website.",
+                "DefaultRootObject": "index.html",
+                "Enabled": true,
+                "HttpVersion": "http2",
+                "PriceClass": "PriceClass_All",
+                "ViewerCertificate": {
+                  "AcmCertificateArn": "arn:aws:acm:us-east-1:344260392803:certificate/6e6ea77e-f76d-4d54-b400-86ac67bbf5d7",
+                  "MinimumProtocolVersion": "TLSv1.1_2016",
+                  "SslSupportMethod": "sni-only"
+                }
+              }
+            }
+          },
+          "FrontPageDNSNameAlias": {
+            "Type": "AWS::Route53::RecordSetGroup",
+            "Properties": {
+              "HostedZoneName": "dev.kkesley.com.",
+              "RecordSets": [
+                {
+                  "Name": "www-dev.kkesley.com",
+                  "Type": "A",
+                  "AliasTarget": {
+                    "HostedZoneId": "Z2FDTNDATAQYW2",
+                    "DNSName": {
+                      "Fn::GetAtt": [
+                        "FrontPageCloudFront",
+                        "DomainName"
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "FrontPageDNSName": {
+            "Type": "AWS::Route53::RecordSetGroup",
+            "Properties": {
+              "HostedZoneName": "dev.kkesley.com.",
+              "RecordSets": [
+                {
+                  "Name": "dev.kkesley.com",
+                  "Type": "A",
+                  "AliasTarget": {
+                    "HostedZoneId": "Z2FDTNDATAQYW2",
+                    "DNSName": {
+                      "Fn::GetAtt": [
+                        "FrontPageCloudFront",
+                        "DomainName"
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Outputs": {
+          "ServerlessDeploymentBucketName": {
+            "Value": {
+              "Ref": "ServerlessDeploymentBucket"
+            }
+          }
+        }
+      },
+      "coreCloudFormationTemplate": {
+        "AWSTemplateFormatVersion": "2010-09-09",
+        "Description": "The AWS CloudFormation template for this Serverless application",
+        "Resources": {
+          "ServerlessDeploymentBucket": {
+            "Type": "AWS::S3::Bucket",
+            "Properties": {
+              "BucketEncryption": {
+                "ServerSideEncryptionConfiguration": [
+                  {
+                    "ServerSideEncryptionByDefault": {
+                      "SSEAlgorithm": "AES256"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "Outputs": {
+          "ServerlessDeploymentBucketName": {
+            "Value": {
+              "Ref": "ServerlessDeploymentBucket"
+            }
+          }
+        }
+      }
+    },
+    "custom": {
+      "DOMAIN_NAME": {
+        "dev": "dev.kkesley.com",
+        "prod": "kkesley.com"
+      },
+      "FULL_DOMAIN_NAME": {
+        "dev": "www-dev.kkesley.com",
+        "prod": "www.kkesley.com"
+      },
+      "CERTIFICATE_ARN": "arn:aws:acm:us-east-1:344260392803:certificate/6e6ea77e-f76d-4d54-b400-86ac67bbf5d7"
+    },
+    "pluginsData": {},
+    "functions": {},
+    "resources": {
+      "Resources": {
+        "FrontPageWebsiteBucket": {
+          "Type": "AWS::S3::Bucket",
+          "Properties": {
+            "WebsiteConfiguration": {
+              "IndexDocument": "index.html",
+              "ErrorDocument": "404.html"
+            }
+          }
+        },
+        "FrontPageCloudFront": {
+          "Type": "AWS::CloudFront::Distribution",
+          "DependsOn": [
+            "FrontPageWebsiteBucket"
+          ],
+          "Properties": {
+            "DistributionConfig": {
+              "Origins": [
+                {
+                  "DomainName": {
+                    "Fn::Select": [
+                      2,
+                      {
+                        "Fn::Split": [
+                          "/",
+                          {
+                            "Fn::GetAtt": [
+                              "FrontPageWebsiteBucket",
+                              "WebsiteURL"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "Id": "S3Origin",
+                  "CustomOriginConfig": {
+                    "HTTPPort": "80",
+                    "HTTPSPort": "443",
+                    "OriginProtocolPolicy": "http-only"
+                  }
+                }
+              ],
+              "CustomErrorResponses": [
+                {
+                  "ErrorCachingMinTTL": 0,
+                  "ErrorCode": 403,
+                  "ResponseCode": 200,
+                  "ResponsePagePath": "/index.html"
+                }
+              ],
+              "Aliases": [
+                "dev.kkesley.com",
+                "www-dev.kkesley.com"
+              ],
+              "DefaultCacheBehavior": {
+                "AllowedMethods": [
+                  "GET",
+                  "HEAD"
+                ],
+                "Compress": true,
+                "ForwardedValues": {
+                  "QueryString": true,
+                  "Cookies": {
+                    "Forward": "none"
+                  }
+                },
+                "TargetOriginId": "S3Origin",
+                "ViewerProtocolPolicy": "redirect-to-https"
+              },
+              "Comment": "Distribution of front page website. Need to replaced with the actual website.",
+              "DefaultRootObject": "index.html",
+              "Enabled": true,
+              "HttpVersion": "http2",
+              "PriceClass": "PriceClass_All",
+              "ViewerCertificate": {
+                "AcmCertificateArn": "arn:aws:acm:us-east-1:344260392803:certificate/6e6ea77e-f76d-4d54-b400-86ac67bbf5d7",
+                "MinimumProtocolVersion": "TLSv1.1_2016",
+                "SslSupportMethod": "sni-only"
+              }
+            }
+          }
+        },
+        "FrontPageDNSNameAlias": {
+          "Type": "AWS::Route53::RecordSetGroup",
+          "Properties": {
+            "HostedZoneName": "dev.kkesley.com.",
+            "RecordSets": [
+              {
+                "Name": "www-dev.kkesley.com",
+                "Type": "A",
+                "AliasTarget": {
+                  "HostedZoneId": "Z2FDTNDATAQYW2",
+                  "DNSName": {
+                    "Fn::GetAtt": [
+                      "FrontPageCloudFront",
+                      "DomainName"
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "FrontPageDNSName": {
+          "Type": "AWS::Route53::RecordSetGroup",
+          "Properties": {
+            "HostedZoneName": "dev.kkesley.com.",
+            "RecordSets": [
+              {
+                "Name": "dev.kkesley.com",
+                "Type": "A",
+                "AliasTarget": {
+                  "HostedZoneId": "Z2FDTNDATAQYW2",
+                  "DNSName": {
+                    "Fn::GetAtt": [
+                      "FrontPageCloudFront",
+                      "DomainName"
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "Outputs": {}
+    },
+    "serviceFilename": "serverless.yml",
+    "layers": {}
+  },
+  "package": {
+    "artifactDirectoryName": "serverless/kkesley/dev/1561212216758-2019-06-22T14:03:36.758Z",
+    "artifact": ""
+  }
+}
