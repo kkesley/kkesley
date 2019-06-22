@@ -2,16 +2,16 @@ import React, { memo } from 'react'
 import ProjectItem from 'components/project-item'
 
 
-import ImagePropertiAnda from 'assets/properti-anda.png'
-import ImageGakushudo from 'assets/gakushudo.png'
-import ImageGakushudoApp from 'assets/gakushudo-app.png'
-import ImageTaxation from 'assets/taxation.png'
-import ImageTheParlour from 'assets/theparlour.png'
-import ImageIteacup from 'assets/iteacup.png'
-import ImageVeronicaOng from 'assets/veronicaonggoro.png'
-import ImageMaximumEffort from 'assets/maximumeffort.png'
-import ImageCPA from 'assets/CPA.png'
-import ImagePsychPress from 'assets/psychpress.png'
+import ImagePropertiAnda from 'assets/projects/properti-anda.png'
+import ImageGakushudo from 'assets/projects/gakushudo.png'
+import ImageGakushudoApp from 'assets/projects/gakushudo-app.png'
+import ImageTaxation from 'assets/projects/taxation.png'
+import ImageTheParlour from 'assets/projects/theparlour.png'
+import ImageIteacup from 'assets/projects/iteacup.png'
+import ImageVeronicaOng from 'assets/projects/veronicaonggoro.png'
+import ImageMaximumEffort from 'assets/projects/maximumeffort.png'
+import ImageCPA from 'assets/projects/CPA.png'
+import ImagePsychPress from 'assets/projects/psychpress.png'
 
 const Project = () => (
     <section id="section__tech-stack" className="section">
@@ -50,7 +50,7 @@ const Project = () => (
                     <ProjectItem project={{ poster: ImageMaximumEffort, title: 'maximum effort', year: '2015 - 2016' }} />
                 </div>
             </div>
-            <p className="subtitle">Want to see more? <a href="asd" className="has-text-link">Click me!</a></p>
+            {/* <p className="subtitle">Want to see more? <a href="asd" className="has-text-link">Click me!</a></p> */}
         </div>
     </section>
 )

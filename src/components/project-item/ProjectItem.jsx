@@ -5,8 +5,8 @@ import './ProjectItem.scss'
 
 const ProjectItem = ({ project }) => (
     <div className="content is-medium has-text-centered">
-        <a href="abc" className="image-overlay-container">
-            <img role="presentation" alt="System Design" src={project.poster} />
+        <a href="/" className="image-overlay-container">
+            <img role="presentation" alt={project.title} src={project.poster} />
             <div className="is-overlay"></div>
         </a>
         <h4 className="title is-4">{project.title}</h4>

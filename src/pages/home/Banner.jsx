@@ -7,8 +7,8 @@ const Banner = () => (
     <section id="section__banner" className="section hero is-fullheight-with-navbar">
         <div className="hero-body">
             <div className="container">
-                <div class="columns is-mobile is-vcentered">
-                    <div class="column is-half-desktop is-full-mobile">
+                <div className="columns is-mobile is-vcentered">
+                    <div className="column is-half-desktop is-full-mobile">
                         <div className="container">
                             <h1 className="title is-1">
                                 Kendrick Kesley
@@ -18,7 +18,7 @@ const Banner = () => (
                             </h2>
                         </div>
                     </div>
-                    <div class="column is-half-desktop is-flex hero-image-container">
+                    <div className="column is-half-desktop is-flex hero-image-container">
                         <img className="hero-image" src={BannerImage} alt="" />
                     </div>
                 </div>
