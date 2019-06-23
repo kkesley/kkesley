@@ -87,5 +87,4 @@ resources:
             AliasTarget:
               HostedZoneId: Z2FDTNDATAQYW2 #cloudfront hostedzone id
               DNSName: !GetAtt [FrontPageCloudFront, DomainName]
-  Outputs:
     
