@@ -12,6 +12,8 @@ import ImageVeronicaOng from 'assets/projects/veronicaonggoro.png'
 import ImageMaximumEffort from 'assets/projects/maximumeffort.png'
 import ImageCPA from 'assets/projects/CPA.png'
 import ImagePsychPress from 'assets/projects/psychpress.png'
+import ImageEdvise from 'assets/projects/edvise.png'
+import ImageIteacloud from 'assets/projects/iteacloud.png'
 
 const Project = () => (
     <section id="section__tech-stack" className="section">
@@ -19,6 +21,12 @@ const Project = () => (
             <h2 className="title is-2">Projects</h2>
             <p className="subtitle">Commercial and personal projects throughout my journey.</p>
             <div className="columns is-multiline">
+                <div className="column is-half">
+                    <ProjectItem project={{ poster: ImageEdvise, title: 'edvise (canceled)', year: '2018 - 2019' }} />
+                </div>
+                <div className="column is-half">
+                    <ProjectItem project={{ poster: ImageIteacloud, title: 'iteacloud (canceled)', year: '2018 - 2019' }} />
+                </div>
                 <div className="column is-half">
                     <ProjectItem project={{ poster: ImageVeronicaOng, title: 'veronicaonggoro.com', year: '2017 - 2018' }} />
                 </div>

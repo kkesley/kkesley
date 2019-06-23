@@ -67,8 +67,8 @@
             }
           ],
           "Aliases": [
-            "dev.kkesley.com",
-            "www-dev.kkesley.com"
+            "kkesley.com",
+            "www.kkesley.com"
           ],
           "DefaultCacheBehavior": {
             "AllowedMethods": [
@@ -101,10 +101,10 @@
     "FrontPageDNSNameAlias": {
       "Type": "AWS::Route53::RecordSetGroup",
       "Properties": {
-        "HostedZoneName": "dev.kkesley.com.",
+        "HostedZoneName": "kkesley.com.",
         "RecordSets": [
           {
-            "Name": "www-dev.kkesley.com",
+            "Name": "www.kkesley.com",
             "Type": "A",
             "AliasTarget": {
               "HostedZoneId": "Z2FDTNDATAQYW2",
@@ -122,10 +122,10 @@
     "FrontPageDNSName": {
       "Type": "AWS::Route53::RecordSetGroup",
       "Properties": {
-        "HostedZoneName": "dev.kkesley.com.",
+        "HostedZoneName": "kkesley.com.",
         "RecordSets": [
           {
-            "Name": "dev.kkesley.com",
+            "Name": "kkesley.com",
             "Type": "A",
             "AliasTarget": {
               "HostedZoneId": "Z2FDTNDATAQYW2",
