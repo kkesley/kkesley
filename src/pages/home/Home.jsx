@@ -10,13 +10,13 @@ import Certification from './Certification'
 
 const Home = () => {
   return (
-    <React.Fragment id="page__home">
+    <div id="page__home">
       <Banner />
       <Service />
       <Project />
       <TechStack />
       <Certification />
-    </React.Fragment>
+    </div>
   );
 }
 
