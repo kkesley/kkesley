@@ -10,4 +10,4 @@ This is a small commercial project in which I'm required to operate the system m
 ## Misc. Info
     - project type: commercial
     - number of developer: 1
-    - type of system: software
+    - system type: software

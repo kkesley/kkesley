@@ -22,5 +22,5 @@ I developed Maximumeffort from scratch and I learned a lot as this is my first c
 ## Misc. Info
     - project type: commercial
     - number of developer: 1
-    - type of system: web application
+    - system type: web application
     - number of website developed: 2
