@@ -1,5 +1,5 @@
 ## Project Introduction
-Iteacup is an accounting web application which includes general ledger, income statement, inventory management, and other accounting features. Each client would have their own domain with their own database. There are 4 developers who worked on this system and each of us are assigned some parts of the system. 
+Iteacup is an accounting web application which includes general ledger, income statement, inventory management, and other accounting features. Each client would have their own domain with their own database. There are 4 developers who worked on this system and each of us are assigned some parts of the system. As a bonus, I also learned one or two things about accounting and how financial reports relate to each other.
 
 ## Tech Stack
 #### Front-End
@@ -16,4 +16,5 @@ This is the first project which I need to learn how to work as a team. We need t
     - project type: commercial
     - number of developer: 4
     - number of project manager: 1
-    - system type: website
+    - system type: web application
+    - location: Indonesia

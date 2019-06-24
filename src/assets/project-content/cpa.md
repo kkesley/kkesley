@@ -11,3 +11,4 @@ This is a small commercial project in which I'm required to operate the system m
     - project type: commercial
     - number of developer: 1
     - system type: software
+    - location: Indonesia
