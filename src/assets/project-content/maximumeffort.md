@@ -19,6 +19,8 @@ We deployed the system through a website hosting.
 ## Key Learning
 I developed Maximumeffort from scratch and I learned a lot as this is my first commercial project. The process starts with requirements gathering, producing a demo system, implementing the actual system, and deploying it on the hosting server. I also learnt how painful is it to modify HTML using jQuery without any data binding.
 
-## Misc. Stats
+## Misc. Info
+    - project type: commercial
     - number of developer: 1
+    - type of system: web application
     - number of website developed: 2
