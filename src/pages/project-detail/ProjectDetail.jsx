@@ -12,7 +12,9 @@ const ProjectDetail = () => (
             <hr />
         </div>
         <section id="section__content" className="section content markdown__content">
-            <ReactMarkdown source={input} />
+            <div className="container">
+                <ReactMarkdown source={input} />
+            </div>
         </section>
     </div>
 )
