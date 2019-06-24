@@ -1,3 +1,5 @@
+Want to see the project? [Click here!](https://propertianda.com)
+
 ## Project Introduction
 This is one of the biggest projects that I've had my entire career. The business is running and growing. I've been included from the inception phase until a year after they released the initial version of the website. This project has 2 main parts which are a website and an admin system.
 
@@ -16,14 +18,14 @@ Both the website and the admin system uses AngularJS as the front-end. I used tw
 #### Back-End
 The back-end is built using plain PHP with MYSQL as the database.
 
-#### Deployment
-The system is deployed to a single EC2 Instance which hold the website, API, and an email server. We used AWS RDS for hosting the database.
+#### Other
+We used an EC2 Instance, RDS, Route53, and SES to accomplish completion of the system.
 
 ## Key Learning
 #### Technical
-The most challenging part of the system is how to program the market behaviour. There were edge cases which I missed and resulting in a complete rewrite of the program. This project also greatly reinforced my knowledge about web development as I need to handle all development and bug fixings. I was also exposed to some AWS services other than EC2 such as RDS and SES.
+The most challenging part of the system is how to program the market behaviour. There were edge cases which I missed and resulting in a complete rewrite of the program. This project also greatly reinforced my knowledge about web development as I need to handle all development and bug fixings. I was also exposed to some AWS services other than EC2 such as RDS, Route53, and SES.
 
-#### Management
+#### Project Management
 This project also taught me about how to improve unrealistic requirements and communicate them back to clients. I also learned how to prioritize features for business requirements and negotiate some requirements to achieve their targeted deadline. In overall, I was exposed to the full software development lifecycle which is an unforgettable experience.
 
 ## Misc. Info

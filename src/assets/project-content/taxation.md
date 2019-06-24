@@ -4,8 +4,8 @@ This project is intended for tax consultants who want to manage their customers 
 ## Tech Stack
 The web application is built using AngularJS and a Bootstrap template from [themeforest](https://themeforest.net/). We also used Firebase Authentication & Real-Time Database for handling users and data. Therefore, we do not have any back-end system for this project.
 
-### Deployment
-We deployed the system to an EC2 instance.
+### Other
+We also used an EC2 Instance which is managed by one of our team members.
 
 ## Key Learnings
 This is my first time structuring data using a NoSQL database. The learning curve was steep as I oftenly need to restructure the data model. However, it was very worth it and I learned how to produce an efficient schema in NoSQL, which includes techniques such as replication and domain modeling.

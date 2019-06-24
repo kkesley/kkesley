@@ -5,8 +5,7 @@ Maximumeffort was a website for a professional gaming team with the same name. T
 The website holds information regarding the team, and it provides an interface to register for available tournaments. When visitors are registered for a tournament, they can see their schedules and the tournament's current progress.
 
 #### Admin System
-
-The admin system is used to manage contents for the website including profiles for the entire team and each member of the team. The admin can also create new tournaments which will be reflected in the website.
+The admin system is used to manage contents for the website including profiles for the entire team and each member of the team. The admin can also create new tournaments which will be reflected in the website. **The website has been brought down and not available for public anymore.**
 
 ## Tech Stack
 #### Front-End

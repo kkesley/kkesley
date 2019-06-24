@@ -1,6 +1,5 @@
 ## Project Introduction
-This project has a deliverable of a website which includes a company information, services, and products. The client is a hairdresser business, called The Parlour Hairdressing, which are based in two large cities in Indonesia.
-
+This project has a deliverable of a website which includes a company information, services, and products. The client is a hairdresser business, called The Parlour Hairdressing, which are based in two large cities in Indonesia.  **The website has been brought down and not available for public anymore.**
 
 ## Tech Stack
 The website is a static site built using AngularJS which is deployed to an EC2 instance.

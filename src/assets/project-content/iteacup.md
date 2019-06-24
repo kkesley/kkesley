@@ -6,8 +6,8 @@ Iteacup is an accounting web application which includes general ledger, income s
 We used AngularJS for the front-end using Bootstrap as the CSS framework.
 #### Back-End
 The system's API is made using plain PHP and MYSQL as the database.
-#### Deployment
-The system is deployed to an EC2 Instance which is act as web server, database server, and email server.
+#### Other
+We also used an EC2 Instance which is managed by one of our team members.
 
 ## Key Learning
 This is the first project which I need to learn how to work as a team. We need to share our knowledge of the system and integrate features made by other team members. I also learned about data binding (using AngularJS) which makes development much easier. Along the way, we often gather together and code to fix bugs / implement new features. The process was fun and rewarding for me.
