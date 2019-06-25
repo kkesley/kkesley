@@ -1,6 +1,6 @@
 Want to see the project? [Click here!](https://propertianda.com)
 
-## Project Introduction
+## Project Background
 This is one of the biggest projects that I've had my entire career. The business is running and growing. I've been included from the inception phase until a year after they released the initial version of the website. This project has 2 main parts which are a website and an admin system.
 
 #### Website

@@ -1,4 +1,4 @@
-## Project Introduction
+## Project Background
 Maximumeffort was a website for a professional gaming team with the same name. The project is divided into 2 parts, the website and an admin system. This is my first project in which I learnt a lot about web development and how to deploy it to a hosting server. Due to some circumstances, the website is no longer available.
 
 #### Website

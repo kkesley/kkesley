@@ -1,4 +1,4 @@
-## Project Introduction
+## Project Background
 This project has a deliverable of a website which includes a company information, services, and products. The client is a hairdresser business, called The Parlour Hairdressing, which are based in two large cities in Indonesia.  **The website has been brought down and not available for public anymore.**
 
 ## Tech Stack

@@ -1,4 +1,4 @@
-## Project Introduction
+## Project Background
 CPA Australia is an organization that helps prepare accountants to be a Certified Public Accountant. This software is for an annual competition which is held by CPA Australia in Jakarta, Indonesia for university students. The software's responsibility is to display questions of the competition and record each team's score. This software is used twice in 2015 & 2016.
 
 ## Tech Stack

@@ -1,4 +1,4 @@
-## Project Introduction
+## Project Background
 This project is an extension of [Iteacup](/projects/iteacup) which is tailored for a specific client. We need to create a company profile website. The website also serve as an ordering system for students to order books from the company which is connected to [Iteacup's](/projects/iteacup) API. The client is one of the biggest Japanese course providers in Jakarta, Indonesia. The website can be viewed in Bahasa, English, or Japanese.
 
 There are 2 developers who were included in this project, and one of them is also acting as a project manager.

@@ -1,4 +1,4 @@
-## Project Introduction
+## Project Background
 This project is intended for tax consultants who want to manage their customers using web based system, and is tailored for a client. There are two developers working on this project including me. The other developer was also acting as the project manager. As a bonus, I also learned one or two things about taxation in Indonesia.
 
 ## Tech Stack

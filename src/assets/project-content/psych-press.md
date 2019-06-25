@@ -1,4 +1,4 @@
-## Background
+## Career Background
 I was hired as a casual developer in Psych Press while I was studying for my undergraduate and postgraduate degree. I did maximum 20 hours/week while studying and did 40 hours/week on average when I was on my uni break.
 
 ## Responsibilities
