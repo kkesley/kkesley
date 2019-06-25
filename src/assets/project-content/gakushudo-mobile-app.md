@@ -14,3 +14,4 @@ This was a fun project and I learned a lot about Ionic 2 and how to extend API f
     - number of developer: 2
     - number of project manager: 1
     - system type: mobile application
+    - developed in: Indonesia

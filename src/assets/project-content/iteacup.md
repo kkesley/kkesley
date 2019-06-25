@@ -17,4 +17,4 @@ This is the first project which I need to learn how to work as a team. We need t
     - number of developer: 4
     - number of project manager: 1
     - system type: web application
-    - location: Indonesia
+    - developed in: Indonesia

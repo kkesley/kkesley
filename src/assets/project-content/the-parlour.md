@@ -12,3 +12,4 @@ I worked with a great designer for this project and it was really fun. We have t
     - number of developer: 1
     - number of designer: 1
     - system type: website
+    - developed in: Indonesia

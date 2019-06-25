@@ -16,3 +16,9 @@ Some other things which I learned:
 
     - Transcoding videos using AWS Elastic Transcoder to produce different formats of videos.
     - SES incoming email events, and how to process those emails for the application.
+
+## Misc. Info
+    - project type: personal
+    - number of developer: 1
+    - system type: website
+    - developed in: Melbourne, Australia

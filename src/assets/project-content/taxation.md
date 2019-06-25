@@ -15,4 +15,4 @@ This is my first time structuring data using a NoSQL database. The learning curv
     - number of developer: 2
     - number of project manager: 1
     - system type: web application
-    - location: Indonesia
+    - developed in: Indonesia

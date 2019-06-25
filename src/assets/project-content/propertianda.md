@@ -32,3 +32,5 @@ This project also taught me about how to improve unrealistic requirements and co
     - project type: commercial
     - number of developer: 1
     - system type: web application
+    - number of website developed: 2
+    - developed in: Indonesia & Melbourne, Australia

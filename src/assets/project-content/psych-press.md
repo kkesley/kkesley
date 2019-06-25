@@ -13,3 +13,4 @@ I did a lot of things other than development as well such as helping with calls 
 ## Misc. Info
     - job type: casual
     - number of developer: 5
+    - location: Melbourne, Australia

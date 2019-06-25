@@ -14,3 +14,4 @@ The project reinforced my experience regarding web development. I was also expos
     - number of developer: 2
     - number of project manager: 1
     - system type: website
+    - developed in: Indonesia

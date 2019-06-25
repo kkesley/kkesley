@@ -23,4 +23,4 @@ I developed Maximumeffort from scratch and I learned a lot as this is my first c
     - number of developer: 1
     - system type: web application
     - number of website developed: 2
-    - location: Indonesia
+    - developed in: Indonesia
