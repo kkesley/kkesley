@@ -18,8 +18,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build:bare": "react-scripts build",
-    "build:dev": "env-cmd .env.development && yarn build:bare",
-    "build:prod": "env-cmd .env.production && yarn build:bare",
+    "build:dev": "env-cmd -f ./.env.development yarn build:bare",
+    "build:prod": "env-cmd -f ./.env.production yarn build:bare",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
