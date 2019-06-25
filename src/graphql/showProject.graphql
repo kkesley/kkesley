@@ -1,0 +1,9 @@
+query Project($project_id: String!) {
+    showProject(project_id: $project_id) {
+        project_id
+        title
+        year
+        content
+        poster_url
+    }
+}

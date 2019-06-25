@@ -1,0 +1,11 @@
+query Projects($next_token: String) {
+    listProjects(next_token: $next_token) {
+        items {
+            project_id
+            title
+            year
+            poster_url
+        }
+        next_token
+    }
+}
