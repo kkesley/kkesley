@@ -1,7 +1,7 @@
 import { AUTH_TYPE } from 'aws-appsync';
 
 let config
-if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+if (!process.env.APP_STAGE || process.env.APP_STAGE === 'development') {
     // development app sync
     config = {
         graphqlEndpoint: 'https://e2a2i2y45vh3hfg3ouiquu3n44.appsync-api.ap-southeast-2.amazonaws.com/graphql',
