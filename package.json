@@ -3,9 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "aws-appsync": "^1.8.1",
     "bulma": "^0.7.5",
+    "graphql.macro": "^1.4.2",
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
+    "react-apollo": "^2.5.8",
     "react-dom": "^16.8.6",
     "react-markdown": "^4.0.9",
     "react-router-dom": "^5.0.1",

@@ -1,0 +1,149 @@
+.m-loader {
+    position: relative;
+    display: block;
+    &:before {
+      content: '';
+      box-sizing: border-box;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border-top: 2px solid #07d;
+      border-right: 2px solid transparent;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+      -webkit-animation: m-loader-rotate 0.6s linear infinite;
+      -moz-animation: m-loader-rotate 0.6s linear infinite;
+      -ms-animation: m-loader-rotate 0.6s linear infinite;
+      -o-animation: m-loader-rotate 0.6s linear infinite;
+      animation: m-loader-rotate 0.6s linear infinite;
+      width: 1.4rem;
+      height: 1.4rem;
+      margin-top: -0.7rem;
+      margin-left: -0.7rem;
+      border-top-width: 2px;
+      border-right-width: 2px;
+    }
+    &.m-loader--lg:before {
+      width: 2rem;
+      height: 2rem;
+      margin-top: -1rem;
+      margin-left: -1rem;
+      border-top-width: 3px;
+      border-right-width: 3px;
+    }
+    &.m-loader--sm:before {
+      width: 1rem;
+      height: 1rem;
+      margin-top: -0.5rem;
+      margin-left: -0.5rem;
+      border-top-width: 1px;
+      border-right-width: 1px;
+    }
+    &.m-loader--right {
+      &:before {
+        left: auto;
+        right: 0.7rem;
+      }
+      &.m-loader--lg:before {
+        right: 1rem;
+      }
+      &.m-loader--sm:before {
+        right: 0.5rem;
+      }
+      &.btn {
+        padding-right: 3.35rem;
+        &.m-loader--lg {
+          padding-right: 4.75rem;
+        }
+        &.m-loader--sm {
+          padding-right: 2.25rem;
+        }
+      }
+    }
+    &.m-loader--left {
+      &:before {
+        left: 1.4rem;
+      }
+      &.m-loader--lg:before {
+        left: 2rem;
+      }
+      &.m-loader--sm:before {
+        left: 1rem;
+      }
+      &.btn {
+        padding-left: 3.35rem;
+        &.m-loader--lg {
+          padding-left: 4.75rem;
+        }
+        &.m-loader--sm {
+          padding-left: 2.25rem;
+        }
+      }
+    }
+    &:before {
+      border-top-color: #dfe2ea;
+    }
+    &.m-loader--skin-dark:before {
+      border-top-color: #acafba;
+    }
+    &.m-loader--brand:before {
+      border-top-color: #716aca;
+    }
+    &.m-loader--metal:before {
+      border-top-color: #c4c5d6;
+    }
+    &.m-loader--light:before {
+      border-top-color: #ffffff;
+    }
+    &.m-loader--accent:before {
+      border-top-color: #00c5dc;
+    }
+    &.m-loader--focus:before {
+      border-top-color: #9816f4;
+    }
+    &.m-loader--primary:before {
+      border-top-color: #5867dd;
+    }
+    &.m-loader--success:before {
+      border-top-color: #34bfa3;
+    }
+    &.m-loader--info:before {
+      border-top-color: #36a3f7;
+    }
+    &.m-loader--warning:before {
+      border-top-color: #ffb822;
+    }
+    &.m-loader--danger:before {
+      border-top-color: #f4516c;
+    }
+  }
+  
+  @-webkit-keyframes m-loader-rotate {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  
+  @-moz-keyframes m-loader-rotate {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  
+  @-o-keyframes m-loader-rotate {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  
+  @keyframes m-loader-rotate {
+    to {
+      transform: rotate(360deg);
+    }
+  }

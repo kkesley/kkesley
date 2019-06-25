@@ -1,0 +1,10 @@
+query Projects {
+    listProjectsInHome {
+        items {
+            project_id
+            title
+            year
+            poster_url
+        }
+    }
+}
