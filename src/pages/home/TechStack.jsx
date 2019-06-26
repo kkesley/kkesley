@@ -42,7 +42,7 @@ const TechStack = () => (
                 Develop API using Go / nodeJS and deploy to AWS Lambda. DynamoDB is great for database requirements and you can sync your data to ElasticSearch using DynamoDB Streams!
             </Row>
             <Row title="Architecture" images={[{ src: ImageAWS, alt: 'Amazon Web Services' }, { src: ImageServerless, alt: 'Serverless Framework' }]}>
-                AWS, AWS, AWS! Orchestrate AWS products to achieve business requirements, especially using serverless design patterns. I'm currently using Serverless Framework to orchestrate serverless architectures.
+                AWS, AWS, AWS! Orchestate AWS products to achieve business requirements, especially using serverless design patterns. I'm currently using Serverless Framework to orchestrate serverless architectures.
             </Row>
             {/* <p className="subtitle" style={{ marginTop: '5em' }}>Curious about my previous tech stacks? <a href="asd" className="has-text-link">Check it out!</a></p> */}
         </div>

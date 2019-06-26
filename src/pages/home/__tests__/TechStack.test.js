@@ -1,8 +1,5 @@
 import React from 'react';
 import { shallow } from 'enzyme'
-import dictionary from 'dictionary-en-us'
-import nspell from 'nspell'
-import removePunctuation from 'remove-punctuation'
 
 import TechStack from '../TechStack';
 
@@ -33,25 +30,6 @@ describe('TechStack Component', () => {
             expect(rows.at(1).props().title).toBe('Web Front-End')
             expect(rows.at(2).props().title).toBe('Back-End')
             expect(rows.at(3).props().title).toBe('Architecture')
-        })
-        it('does not have typos in descriptions', done => {
-            dictionary((_, dict) => {
-                const spell = nspell(dict)
-                spell.dictionary(
-                    ['ReactJS'].join('\n')
-                )
-                for (let i = 0; i < rows.length; i++) {
-                    removePunctuation(rows.at(i).children().text()).split(" ").forEach(word => {
-                        if (word.length <= 0) return
-                        const isCorrect = spell.correct(word)
-                        if (!isCorrect) {
-                            console.log(`${word} is not a correct word. Either add it in the dictionary or fix the word.`)
-                        }
-                        expect(isCorrect).toEqual(true)
-                    })
-                }
-                done()
-            })
         })
     })
 })

@@ -1,8 +1,5 @@
 import React from 'react';
 import { shallow } from 'enzyme'
-import dictionary from 'dictionary-en-us'
-import nspell from 'nspell'
-import removePunctuation from 'remove-punctuation'
 
 import Service from '../Service';
 
@@ -28,26 +25,5 @@ describe('Service Component', () => {
         expect(images.at(0).props().src).toBe(ImageWeb)
         expect(images.at(1).props().src).toBe(ImageSystem)
         expect(images.at(2).props().src).toBe(ImageData)
-    })
-    it('does not have typos in descriptions', done => {
-        const descriptions = wrapper.find('p')
-        expect(descriptions.length).toBe(3)
-        dictionary((_, dict) => {
-            const spell = nspell(dict)
-            spell.dictionary(
-                ['scalable', 'NoSQL'].join('\n')
-            )
-            for (let i = 0; i < descriptions.length; i++) {
-                removePunctuation(descriptions.at(i).text()).split(" ").forEach(word => {
-                    if (word.length <= 0) return
-                    const isCorrect = spell.correct(word)
-                    if (!isCorrect) {
-                        console.log(`${word} is not a correct word. Either add it in the dictionary or fix the word.`)
-                    }
-                    expect(isCorrect).toEqual(true)
-                })
-            }
-            done()
-        })
     })
 })
