@@ -17,9 +17,11 @@ const Project = () => (
                 query={listProjectsQuery} 
                 notifyOnNetworkStatusChange={true}
             >
-                {({ loading, data: { listProjectsInHome }, error }) => {
+                {({ loading, data, error }) => {
                     if (loading) return <Spinner />
                     if (error) return <p>{error.message}</p>
+                    if (!data || !data.listProjectsInHome) return null
+                    const { listProjectsInHome } = data
                     const { items } = listProjectsInHome
                     if ((items || []).length === 0) return <p>No projects</p>
                     return (
@@ -32,7 +34,6 @@ const Project = () => (
                                 ))
                             }
                         </div>
-                        
                     )
                 }}
             </Query>

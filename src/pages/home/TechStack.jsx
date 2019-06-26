@@ -13,7 +13,7 @@ import ImageLambda from 'assets/tech/lambda.png'
 import ImageAWS from 'assets/tech/aws.png'
 import ImageServerless from 'assets/tech/serverless.png'
 
-const Row = ({ title, children, images }) => (
+export const Row = ({ title, children, images }) => (
     <div className="columns">
         <div className="column is-3">
             <p className="title is-4">{title}</p>
@@ -22,7 +22,7 @@ const Row = ({ title, children, images }) => (
             <p className="is-size-5 has-text-grey-light has-text-weight-semibold">{children}</p>
         </div>
         <div className="column is-3 is-offset-1">
-            {images.map(image => <img key={`tech-${image.alt}`} alt={image.alt} title={image.alt} src={image.src} role="presentation" />)}
+            {(images || []).map(image => <img key={`tech-${image.alt}`} alt={image.alt} title={image.alt} src={image.src} role="presentation" />)}
         </div>
     </div>
 )
