@@ -5,7 +5,7 @@ import '@fortawesome/fontawesome-free/css/all.css'
 const Navigation = () => {
     const [ isNavActive, setIsNavActive ] = useState(false)
 
-    const CustomNavLink = ({ exact, to, children }) => <NavLink className="navbar-item" activeClassName="is-active" exact={exact} to={to} onClick={() => setIsNavActive(!isNavActive)}>{children}</NavLink>
+    const CustomNavLink = ({ exact, to, children }) => <NavLink className="navbar-item" activeClassName="is-active" exact={exact} to={to} onClick={() => setIsNavActive(false)}>{children}</NavLink>
 
     return (
         <section id="section__nav" className="hero">
