@@ -9,7 +9,7 @@ import Spinner from 'components/spinner'
 import Banner from './Banner'
 
 const showProjectQuery = loader('graphql/showProject.graphql')
-const ProjectDetail = ({ match: { params: {project} } }) => (
+const ProjectDetail = ({ match: { params: { project } } }) => (
     <div id="page__project-detail">
         <Query
             query={showProjectQuery} 
@@ -19,6 +19,7 @@ const ProjectDetail = ({ match: { params: {project} } }) => (
             {({ loading, data, error }) => {
                 if (loading) return <Spinner />
                 if (error) return <p>{error.message}</p>
+                if (!data) return null
                 const { showProject } = data
                 if (!showProject) return <p>Project not found</p>
                 const { title, year, poster_url, content } = showProject
