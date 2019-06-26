@@ -37,8 +37,9 @@ describe('Service Component', () => {
             spell.dictionary(
                 ['scalable', 'NoSQL'].join('\n')
             )
-            for (let i = 0; i < 3; i++) {
+            for (let i = 0; i < descriptions.length; i++) {
                 removePunctuation(descriptions.at(i).text()).split(" ").forEach(word => {
+                    if (word.length <= 0) return
                     const isCorrect = spell.correct(word)
                     if (!isCorrect) {
                         console.log(`${word} is not a correct word. Either add it in the dictionary or fix the word.`)
