@@ -1,7 +1,10 @@
 import React from 'react'
 import { BrowserRouter, Route, Switch } from "react-router-dom"
+import { ApolloProvider } from 'react-apollo'
 
 import './App.scss'
+
+import graphqlClient from 'helper/appsync-client'
 
 import ScrollToTop from 'components/scroll-to-top'
 import Navigation from 'components/navigation'
@@ -13,21 +16,23 @@ import ProjectDetail from 'pages/project-detail'
 
 function App() {
   return (
-    <BrowserRouter>
-      <ScrollToTop>
-        <div className="App">
-          <Navigation/>
-          <div className="App-content">
-            <Switch>
-              <Route path="/" exact component={Home} />
-              <Route path="/projects" exact component={ProjectList} />
-              <Route path="/projects/:project" component={ProjectDetail} />
-            </Switch>
+    <ApolloProvider client={graphqlClient}>
+      <BrowserRouter>
+        <ScrollToTop>
+          <div className="App">
+            <Navigation/>
+            <div className="App-content">
+              <Switch>
+                <Route path="/" exact component={Home} />
+                <Route path="/projects" exact component={ProjectList} />
+                <Route path="/projects/:project" component={ProjectDetail} />
+              </Switch>
+            </div>
+            <Footer />
           </div>
-          <Footer />
-        </div>
-      </ScrollToTop>
-    </BrowserRouter>
+        </ScrollToTop>
+      </BrowserRouter>
+    </ApolloProvider>
   );
 }
 

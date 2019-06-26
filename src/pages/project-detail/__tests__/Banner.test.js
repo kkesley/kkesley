@@ -1,13 +1,13 @@
 import React from 'react'
 import { mount } from 'enzyme'
 import { Link, MemoryRouter } from 'react-router-dom'
-import ProjectItem from '../ProjectItem'
+import Banner from '../Banner'
 
 describe('ProjectItem Component', () => {
     let props
     const makeWrapper = props => mount(
         <MemoryRouter>
-            <ProjectItem {...props} />
+            <Banner {...props} />
         </MemoryRouter>
     )
     beforeEach(() => {
@@ -26,18 +26,22 @@ describe('ProjectItem Component', () => {
             wrapper = makeWrapper(props)
         })
         it('has correct title element', () => {
-            expect(wrapper.find('h4').first().text()).toBe(props.project.title)
+            expect(wrapper.find('h1').first().text()).toBe(props.project.title)
         })
         it('has correct year element', () => {
-            expect(wrapper.find('p').first().text()).toBe(props.project.year)
+            expect(wrapper.find('h2').first().text()).toBe(props.project.year)
         })
         it('has correct poster', () => {
             const imageProps = wrapper.find('img').first().props()
             expect(imageProps.src).toBe(props.project.poster_url)
             expect(imageProps.alt).toBe(props.project.title)
         })
-        it('has correct link', () => {
-            expect(wrapper.find(Link).first().props().to).toBe(`/projects/${props.project.project_id}`)
+        it('has correct breadcrumb links', () => {
+            const links = wrapper.find(Link)
+            expect(links.length).toBe(3)
+            expect(links.at(0).props().to).toBe('/')
+            expect(links.at(1).props().to).toBe('/projects')
+            expect(links.at(2).props().to).toBe(`/projects/${props.project.project_id}`)
         })
     })
     describe('with Partial Information', () => {

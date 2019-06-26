@@ -72,7 +72,6 @@ describe('Project Component', () => {
         const wrapper = makeWrapper(mock)
         await wait(0)
         wrapper.update()
-        console.log(wrapper.find(Query).debug())
         expect(wrapper.find(Query).children().length).toBe(0)
     })
     it('has correct project items', async () => {

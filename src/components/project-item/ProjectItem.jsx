@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import './ProjectItem.scss'
 
-const ProjectItem = ({ project }) => (
+const ProjectItem = ({ project }) => project && (
     <div className="content is-medium has-text-centered">
         <Link to={`/projects/${project.project_id}`} className="image-overlay-container">
             <img role="presentation" alt={project.title} src={project.poster_url} />

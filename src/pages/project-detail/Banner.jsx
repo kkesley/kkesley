@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import './Banner.scss'
 
-const Banner = ({ project }) => (
+const Banner = ({ project }) => project && (
     <section id="section__banner" className="section hero is-bold">
         <div className="hero-body">
             <div className="container">
@@ -14,7 +14,7 @@ const Banner = ({ project }) => (
                                 <ul>
                                     <li><Link to="/">home</Link></li>
                                     <li><Link to="/projects">projects</Link></li>
-                                    <li className="is-active"><Link to="/projects/1">{project.title}</Link></li>
+                                    <li className="is-active"><Link to={`/projects/${project.project_id}`}>{project.title}</Link></li>
                                 </ul>
                             </nav>
                             <h1 className="title">

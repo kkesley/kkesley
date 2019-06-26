@@ -12,14 +12,19 @@ const Project = () => (
         <div className="container">
             <Query
                 query={listProjectsQuery} 
-                variables={{ nextToken: null }}
+                variables={{ next_token: null }}
                 notifyOnNetworkStatusChange={true}
             >
-                {({ loading, data: { listProjects }, error, fetchMore }) => {
-                    if (!listProjects) return null
+                {({ loading, data, error, fetchMore }) => {
+                    if (error) return <p>{error.message}</p>
+                    if (!data || !data.listProjects) {
+                        if (loading) return <Spinner />
+                        return null
+                    }
+                    const { listProjects } = data
                     const { items, next_token } = listProjects
                     if (loading && (items || []).length === 0) return <Spinner />
-                    if (error) return <p>{error.message}</p>
+                    
                     if ((items || []).length === 0) return <p>No projects</p>
                     return (
                         <React.Fragment>
@@ -36,8 +41,10 @@ const Project = () => (
                                 <div className="container has-text-centered">
                                     <hr />
                                     <button
+                                        id="load-more"
                                         className={`button is-info ${loading ? 'is-loading' : ''}`}
                                         onClick={() => {
+                                            console.log(next_token)
                                             fetchMore({
                                                 query: listProjectsQuery,
                                                 variables: { next_token },
