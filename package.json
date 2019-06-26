@@ -20,7 +20,7 @@
     "build:dev": "env-cmd -f ./.env.development yarn build:bare",
     "build:prod": "env-cmd -f ./.env.production yarn build:bare",
     "test": "react-scripts test --watchAll=false",
-    "test:coverage": "yarn test -- --coverage",
+    "test:coverage": "yarn test --coverage",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
