@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/kkesley/kkesley.png?branch=master)](https://travis-ci.org/kkesley/kkesley)
+[![Build Status](https://api.travis-ci.com/kkesley/kkesley.png?branch=master)](https://travis-ci.org/kkesley/kkesley)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
