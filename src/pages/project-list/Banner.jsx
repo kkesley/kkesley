@@ -8,7 +8,7 @@ const Banner = () => (
     <section id="section__banner" className="section hero is-bold">
         <div className="hero-body">
             <div className="container">
-                <div className="columns is-mobile is-multiline is-vcentered">
+                <div className="columns is-mobile is-vcentered">
                     <div className="column is-half-desktop is-full-mobile">
                         <div className="container">
                             <nav className="breadcrumb" aria-label="breadcrumbs">

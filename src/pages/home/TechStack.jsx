@@ -35,7 +35,7 @@ const TechStack = () => (
             <Row title="Mobile Application" images={[{ src: ImageReact, alt: 'React Native' }, { src: ImageExpo, alt: 'Expo' }]}>
                 Develop using React Native and Expo. Not an expert, but I really enjoy developing using both technologies!
             </Row>
-            <Row title="Web Front-End" images={[{ src: ImageReact, alt: 'React Native' }, { src: ImageS3, alt: 'AWS S3' }, { src: ImageCloudfront, alt: 'AWS Cloudfront' }]}>
+            <Row title="Web Front-End" images={[{ src: ImageReact, alt: 'ReactJS' }, { src: ImageS3, alt: 'AWS S3' }, { src: ImageCloudfront, alt: 'AWS Cloudfront' }]}>
                 Develop using ReactJS, deploy to AWS S3, and serve it using Cloudfront. Always trying to find excuses to use Lottie!
             </Row>
             <Row title="Back-End" images={[{ src: ImageGolang, alt: 'Golang' }, { src: ImageNodeJS, alt: 'Node JS' }, { src: ImageLambda, alt: 'AWS Lambda' }, { src: ImageDynamoDB, alt: 'AWS DynamoDB' }, { src: ImageElasticSearch, alt: 'ElasticSearch' }]}>

@@ -19,7 +19,7 @@ const Banner = () => (
                         </div>
                     </div>
                     <div className="column is-half-desktop is-flex hero-image-container">
-                        <img className="hero-image" src={BannerImage} alt="" />
+                        <img className="hero-image" src={BannerImage} alt="developer" />
                     </div>
                 </div>
             </div>
