@@ -14,6 +14,8 @@ import Home from 'pages/home'
 import ProjectList from 'pages/project-list'
 import ProjectDetail from 'pages/project-detail'
 
+import withTracker from 'helper/withTracker';
+
 const App = () => (
   <ApolloProvider client={graphqlClient}>
     <BrowserRouter>
@@ -22,9 +24,9 @@ const App = () => (
           <Navigation/>
           <div className="App-content">
             <Switch>
-              <Route path="/" exact component={Home} />
-              <Route path="/projects" exact component={ProjectList} />
-              <Route path="/projects/:project" component={ProjectDetail} />
+              <Route path="/" exact component={withTracker(Home)} />
+              <Route path="/projects" exact component={withTracker(ProjectList)} />
+              <Route path="/projects/:project" component={withTracker(ProjectDetail)} />
             </Switch>
           </div>
           <Footer />
