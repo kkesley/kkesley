@@ -9,7 +9,7 @@ const Certification = () => (
             <h2 className="title is-2">Certifications</h2>
             <div className="columns">
                 <div className="column is-3">
-                    <img alt="AWS Certified Solutions Architect - Associate" src={ImageAWSCSAA} />
+                    <img alt="AWS Certified Solutions Architect - Associate" src={ImageAWSCSAA} title="AWS Certified Solutions Architect - Associate" />
                 </div>
             </div>
         </div>
