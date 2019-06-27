@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
 import GoogleAnalytics from "react-ga";
 
-GoogleAnalytics.initialize('UA-142872440-1')
+if (process.env.NODE_ENV === 'production') {
+    GoogleAnalytics.initialize('UA-142872440-1')
+}
 
 export default (WrappedComponent, options = {}) => {
     const trackPage = page => {
