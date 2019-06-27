@@ -1,4 +1,5 @@
 import React, { memo } from 'react'
+import Helmet from 'react-helmet'
 import { Link, withRouter } from 'react-router-dom'
 import { Query } from 'react-apollo'
 import { loader } from 'graphql.macro';
@@ -11,6 +12,13 @@ import Banner from './Banner'
 const showProjectQuery = loader('graphql/showProject.graphql')
 const ProjectDetail = ({ match: { params: { project } } }) => (
     <div id="page__project-detail">
+        <Helmet>
+            <title>Projects - Kendrick Kesley</title>
+            <link rel="canonical" href={`https://kkesley.com/projects/${project}`} />
+            <meta property="og:url" content={`https://kkesley.com/projects/${project}`}/>
+            <meta property="og:type" content="website" />
+            <meta property="og:title" content="Projects - Kendrick Kesley" />
+        </Helmet>
         <Query
             query={showProjectQuery} 
             variables={{ project_id: project }}
@@ -25,6 +33,12 @@ const ProjectDetail = ({ match: { params: { project } } }) => (
                 const { title, year, poster_url, content } = showProject
                 return (
                     <React.Fragment>
+                        <Helmet>
+                            <title>{title} - Kendrick Kesley</title>
+                            <meta name="description" content={title} />
+                            <meta property="og:description" content={title} />
+                            <meta property="og:image" content={poster_url} />
+                        </Helmet>
                         <Banner project={{ title, year, poster_url }} />
                         <div className="container">
                             <hr />
