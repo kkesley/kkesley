@@ -1,70 +1,41 @@
 [![Build Status](https://api.travis-ci.com/kkesley/kkesley.png?branch=master)](https://travis-ci.org/kkesley/kkesley)
 
+If you wish to see the API's documentation. [Go here](https://github.com/kkesley/kkesley-api)
+
+## Why [![start with why](https://img.shields.io/badge/start%20with-why%3F-brightgreen.svg?style=flat)](http://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action)
+
+This project allows me to archive my previous projects, thoughts, and choices. I tend to forget how fragile I am as a human being. How I made choices which I deem ridiculous at the present but was considered best before (how/when/why did I change?). I'm pretty sure I'll change again in the future, and I will embrace that. Thus, I want to document myself here (only stuffs related to programming though).
+
+Besides, lots of people are having personal sites these days...
+
+## Documentation
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+This is a simple website built on [ReactJS](https://reactjs.org/) w/ [Apollo](https://github.com/apollographql/react-apollo). The website will communicate with AWS Appsync which holds some dynamic data (such as projects).
 
-In the project directory, you can run:
+### Pages
 
-### `npm start`
+Currently, there are only 3 pages in my website
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Home
+2. Project List
+3. Project Detail
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Most of the content is static, except projects which are coming from AWS DynamoDB.
 
-### `npm test`
+Images are optimized using [Squoosh](https://squoosh.app/).
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Testing
 
-### `npm run build`
+Tested with Jest. Can be seen in `__tests__` folder in each component / page.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+You can run the tests using `yarn test` or `yarn test:coverage` for coverage testing.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+### Deploying
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The website is deployed to S3, which covered by AWS Cloudfront.
 
-### `npm run eject`
+I used [Serverless Framework](https://serverless.com/) to orchestrate the resources (S3, Cloudfront, and Route53 record set). You can see the configuration in `__infrastructure/serverless.yml`.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+You can build using `yarn build:dev` (for development env) or `yarn build:prod` (for production env).
