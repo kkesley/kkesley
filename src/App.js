@@ -14,26 +14,24 @@ import Home from 'pages/home'
 import ProjectList from 'pages/project-list'
 import ProjectDetail from 'pages/project-detail'
 
-function App() {
-  return (
-    <ApolloProvider client={graphqlClient}>
-      <BrowserRouter>
-        <ScrollToTop>
-          <div className="App">
-            <Navigation/>
-            <div className="App-content">
-              <Switch>
-                <Route path="/" exact component={Home} />
-                <Route path="/projects" exact component={ProjectList} />
-                <Route path="/projects/:project" component={ProjectDetail} />
-              </Switch>
-            </div>
-            <Footer />
+const App = () => (
+  <ApolloProvider client={graphqlClient}>
+    <BrowserRouter>
+      <ScrollToTop>
+        <div className="App">
+          <Navigation/>
+          <div className="App-content">
+            <Switch>
+              <Route path="/" exact component={Home} />
+              <Route path="/projects" exact component={ProjectList} />
+              <Route path="/projects/:project" component={ProjectDetail} />
+            </Switch>
           </div>
-        </ScrollToTop>
-      </BrowserRouter>
-    </ApolloProvider>
-  );
-}
+          <Footer />
+        </div>
+      </ScrollToTop>
+    </BrowserRouter>
+  </ApolloProvider>
+)
 
-export default App;
+export default App
