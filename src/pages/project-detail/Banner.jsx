@@ -26,7 +26,9 @@ const Banner = ({ project }) => project && (
                         </div>
                     </div>
                     <div className="column is-half-desktop is-flex hero-image-container">
-                        <img className="hero-image" alt={project.title} src={project.poster_url} />
+                        <figure className="image">
+                            <img className="hero-image" alt={project.title} src={project.poster_url} />
+                        </figure>
                     </div>
                 </div>
             </div>
