@@ -17,6 +17,7 @@ import withTracker from 'helper/withTracker'
 
 const ProjectList = lazy(() => import('pages/project-list'))
 const ProjectDetail = lazy(() => import('pages/project-detail'))
+const Resume = lazy(() => import('pages/resume'))
 
 const App = () => (
   <ApolloProvider client={graphqlClient}>
@@ -30,6 +31,7 @@ const App = () => (
                 <Route path="/" exact component={withTracker(Home)} />
                 <Route path="/projects" exact component={withTracker(ProjectList)} />
                 <Route path="/projects/:project" component={withTracker(ProjectDetail)} />
+                <Route path="/resume" component={withTracker(Resume)} />
               </Switch>
             </Suspense>
           </div>
