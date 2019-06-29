@@ -7,6 +7,7 @@
     "aws-appsync": "^1.8.1",
     "bulma": "^0.7.5",
     "graphql.macro": "^1.4.2",
+    "pdfmake": "^0.1.57",
     "react": "^16.8.6",
     "react-apollo": "^2.5.8",
     "react-dom": "^16.8.6",
