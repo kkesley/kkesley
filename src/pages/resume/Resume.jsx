@@ -2,8 +2,11 @@ import React, { memo } from 'react'
 import Helmet from 'react-helmet'
 
 import Banner from './Banner'
-import Education from './Education'
+import Career from './Career'
+import Project from './Project'
 import Skill from './Skill'
+import Education from './Education'
+
 
 const Resume = () => {
   return (
@@ -19,6 +22,8 @@ const Resume = () => {
             <meta property="og:image" content="https://avatars3.githubusercontent.com/u/14907878?s=40&v=4" />
         </Helmet>
         <Banner />
+        <Career />
+        <Project />
         <Skill />
         <Education />
     </div>

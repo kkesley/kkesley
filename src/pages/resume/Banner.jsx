@@ -17,6 +17,10 @@ const Banner = () => (
                 <h2 className="subtitle">
                     Software Developer
                 </h2>
+                <h3>
+                    <span className="icon"><i className="fas fa-envelope"></i></span>
+                    <a href="mailto:kendrick.kesley.dev@gmail.com">kendrick.kesley.dev@gmail.com</a>
+                </h3>
             </div>
         </div>
     </section>

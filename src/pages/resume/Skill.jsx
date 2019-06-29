@@ -1,13 +1,13 @@
 import React, { memo } from 'react'
-const Banner = () => (
-    <section id="section__education" className="section">
+const Skill = () => (
+    <section id="section__skill" className="section">
         <div className="container">
             <h1 className="title">
                 Skills
             </h1>
-            <article class="media">
-                <div class="media-content">
-                    <div class="content">
+            <article className="media">
+                <div className="media-content">
+                    <div className="content">
                         <h3>Technical</h3>
                         <ul>
                             <li>Passed AWS Certified Solutions Architect – Associate certification (2019 - 2021)</li>
@@ -21,9 +21,9 @@ const Banner = () => (
                     </div>
                 </div>
             </article>
-            <article class="media">
-                <div class="media-content">
-                    <div class="content">
+            <article className="media">
+                <div className="media-content">
+                    <div className="content">
                         <h3>Management</h3>
                         <ul>
                             <li>Managed time proportionally between work and study.</li>
@@ -32,9 +32,9 @@ const Banner = () => (
                     </div>
                 </div>
             </article>
-            <article class="media">
-                <div class="media-content">
-                    <div class="content">
+            <article className="media">
+                <div className="media-content">
+                    <div className="content">
                         <h3>Teamwork</h3>
                         <ul>
                             <li>Worked with non-developer teams e.g. designers and business planners.</li>
@@ -47,4 +47,4 @@ const Banner = () => (
     </section>
 )
 
-export default memo(Banner)
+export default memo(Skill)
