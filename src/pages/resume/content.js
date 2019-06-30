@@ -72,7 +72,7 @@ export default {
         ],
     }],
     educations: [{
-        university: 'RMIT University',
+        university: 'RMIT University Australia',
         year_completion: '2019',
         title: 'Master of Information Technology',
     }, {
@@ -80,7 +80,7 @@ export default {
         year_completion: '2018',
         title: 'Bachelor of Computer Science',
     }, {
-        university: 'RMIT University',
+        university: 'RMIT University Australia',
         year_completion: '2017',
         title: 'Bachelor of Information Technology',
     }]

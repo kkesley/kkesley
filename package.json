@@ -6,6 +6,7 @@
     "@fortawesome/fontawesome-free": "^5.9.0",
     "aws-appsync": "^1.8.1",
     "bulma": "^0.7.5",
+    "dayjs": "^1.8.14",
     "graphql.macro": "^1.4.2",
     "pdfmake": "^0.1.57",
     "react": "^16.8.6",
