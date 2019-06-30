@@ -1,3 +1,6 @@
+import ImageBinus from 'assets/university/binus-international.png'
+import ImageRMIT from 'assets/university/rmit.jpg'
+
 export default {
     personal_detail: {
       name: 'Kendrick Kesley',
@@ -75,13 +78,16 @@ export default {
         university: 'RMIT University Australia',
         year_completion: '2019',
         title: 'Master of Information Technology',
+        image: ImageRMIT,
     }, {
         university: 'BINUS International University',
         year_completion: '2018',
         title: 'Bachelor of Computer Science',
+        image: ImageBinus,
     }, {
         university: 'RMIT University Australia',
         year_completion: '2017',
         title: 'Bachelor of Information Technology',
+        image: ImageRMIT,
     }]
 }
