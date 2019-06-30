@@ -1,7 +1,7 @@
 # kkesley.com | [click here to visit](https://kkesley.com)
 
-[![Build Status](https://api.travis-ci.com/kkesley/kkesley.png?branch=master)](https://travis-ci.org/kkesley/kkesley)
-[![Code Coverage](https://img.shields.io/codecov/c/github/kkesley/kkesley.svg?maxAge=2592000)](https://codecov.io/github/kkesley/kkesley?branch=master)
+[![Build Status](https://api.travis-ci.com/kkesley/kkesley.svg?branch=master)](https://travis-ci.org/kkesley/kkesley)
+[![Code Coverage](https://img.shields.io/codecov/c/github/kkesley/kkesley.svg)](https://codecov.io/github/kkesley/kkesley?branch=master)
 
 If you wish to see the API's documentation. [Go here](https://github.com/kkesley/kkesley-api)
 
