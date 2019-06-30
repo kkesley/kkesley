@@ -12,7 +12,7 @@ const Banner = ({ downloadResume, content: { personal_detail } }) => (
                     </ul>
                 </nav>
                 <h1 className="title">
-                    {personal_detail.name} <button onClick={() => downloadResume()} className="button is-info">Download Résumé</button>
+                    {personal_detail.name} <button id="download-resume-button" onClick={() => downloadResume()} className="button is-info">Download Résumé</button>
                 </h1>
                 <h2 className="subtitle">
                     {personal_detail.job_title}
