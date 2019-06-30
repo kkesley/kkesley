@@ -9,6 +9,8 @@ import Project from './Project'
 import Skill from './Skill'
 import Education from './Education'
 
+import content from './content'
+
 PDFMake.vfs = PDFFonts.pdfMake.vfs;
 
 const downloadResume = () => {
@@ -33,11 +35,11 @@ const Resume = () => {
             <meta property="og:title" content="Résumé - Kendrick Kesley" />
             <meta property="og:image" content="https://avatars3.githubusercontent.com/u/14907878?s=40&v=4" />
         </Helmet>
-        <Banner downloadResume={downloadResume} />
-        <Career />
-        <Project />
-        <Skill />
-        <Education />
+        <Banner downloadResume={downloadResume} content={content} />
+        <Career content={content} />
+        <Project content={content} />
+        <Skill content={content} />
+        <Education content={content} />
     </div>
   );
 }

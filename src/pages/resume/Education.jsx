@@ -1,58 +1,30 @@
 import React, { memo } from 'react'
-const Education = () => (
+const Education = ({ content: { educations } }) => (
     <section id="section__education" className="section">
         <div className="container">
             <h1 className="title">
                 Education
             </h1>
-            <article className="media">
-                <figure className="media-left">
-                    <p className="image is-64x64">
-                        <img src="https://bulma.io/images/placeholders/128x128.png"/>
-                    </p>
-                </figure>
-                <div className="media-content">
-                    <div className="content">
-                        <p>
-                            <strong>RMIT University</strong> - <small>2019</small>
-                            <br/>
-                            Master of Information Technology
-                        </p>
-                    </div>
-                </div>
-            </article>
-            <article className="media">
-                <figure className="media-left">
-                    <p className="image is-64x64">
-                        <img src="https://bulma.io/images/placeholders/128x128.png"/>
-                    </p>
-                </figure>
-                <div className="media-content">
-                    <div className="content">
-                        <p>
-                            <strong>BINUS International University</strong> - <small>2018</small>
-                            <br/>
-                            Bachelor of Computer Science
-                        </p>
-                    </div>
-                </div>
-            </article>
-            <article className="media">
-                <figure className="media-left">
-                    <p className="image is-64x64">
-                        <img src="https://bulma.io/images/placeholders/128x128.png"/>
-                    </p>
-                </figure>
-                <div className="media-content">
-                    <div className="content">
-                        <p>
-                            <strong>RMIT University</strong> - <small>2017</small>
-                            <br/>
-                            Bachelor of Information Technology
-                        </p>
-                    </div>
-                </div>
-            </article>
+            {
+                educations.map(education => (
+                    <article key={`education-${education.university}-${education.year_completion}`} className="media">
+                        <figure className="media-left">
+                            <p className="image is-64x64">
+                                <img alt={education.university} src="https://bulma.io/images/placeholders/128x128.png"/>
+                            </p>
+                        </figure>
+                        <div className="media-content">
+                            <div className="content">
+                                <p>
+                                    <strong>{education.university}</strong> - <small>{education.year_completion}</small>
+                                    <br/>
+                                    {education.title}
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                ))
+            }
         </div>
     </section>
 )
