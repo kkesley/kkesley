@@ -1,0 +1,9 @@
+query Blog($blog_id: String!) {
+    showBlog(blog_id: $blog_id) {
+        blog_id
+        title
+        timestamp
+        content
+        tags
+    }
+}

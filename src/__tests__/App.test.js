@@ -48,6 +48,9 @@ describe('App Component', () => {
         it('has Route to Blog List', () => {
             expect(switchWrapper.find('Route').findWhere(c => c.props().path === '/blogs' && c.props().exact).length).toBe(1)
         })
+        it('has Route to Blog Detail', () => {
+            expect(switchWrapper.find('Route').findWhere(c => c.props().path === '/blogs/:blog' && c.props().exact).length).toBe(1)
+        })
         it('has Route to Resume', () => {
             expect(switchWrapper.find('Route').findWhere(c => c.props().path === '/resume').length).toBe(1)
         })

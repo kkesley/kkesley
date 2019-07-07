@@ -18,6 +18,7 @@ import withTracker from 'helper/withTracker'
 const ProjectList = lazy(() => import('pages/project-list'))
 const ProjectDetail = lazy(() => import('pages/project-detail'))
 const BlogList = lazy(() => import('pages/blog-list'))
+const BlogDetail = lazy(() => import('pages/blog-detail'))
 const Resume = lazy(() => import('pages/resume'))
 
 const App = () => (
@@ -33,6 +34,7 @@ const App = () => (
                 <Route path="/projects" exact component={withTracker(ProjectList)} />
                 <Route path="/projects/:project" component={withTracker(ProjectDetail)} />
                 <Route path="/blogs" exact component={withTracker(BlogList)} />
+                <Route path="/blogs/:blog" exact component={withTracker(BlogDetail)} />
                 <Route path="/resume" component={withTracker(Resume)} />
               </Switch>
             </Suspense>
