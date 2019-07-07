@@ -21,7 +21,7 @@ const BlogDetail = ({ match: { params: { blog } } }) => (
         <Query
             query={showBlogQuery} 
             variables={{ blog_id: blog }}
-            notifyOnNetworkStatusChange={true}
+            notifyOnNetworkStatusChange
         >
             {({ loading, data, error }) => {
                 if (loading) return <Spinner />
