@@ -21,6 +21,9 @@ describe('Navigation Component', () => {
     it('has link to projects', () => {
         expect(wrapper.find(NavLink).findWhere(c => c.props().to === '/projects').find(NavLink).length).toBe(1)
     })
+    it('has link to blogs', () => {
+        expect(wrapper.find(NavLink).findWhere(c => c.props().to === '/blogs').find(NavLink).length).toBe(1)
+    })
     it('has link to resume', () => {
         expect(wrapper.find(NavLink).findWhere(c => c.props().to === '/resume').find(NavLink).length).toBe(1)
     })

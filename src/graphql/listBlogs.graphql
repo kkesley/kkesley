@@ -1,0 +1,11 @@
+query Blogs($next_token: String) {
+    listBlogs(next_token: $next_token) {
+        items {
+            blog_id
+            timestamp
+            title
+            tags
+        }
+        next_token
+    }
+}

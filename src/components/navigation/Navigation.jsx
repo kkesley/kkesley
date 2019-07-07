@@ -24,6 +24,7 @@ const Navigation = () => {
                             <div className="navbar-end">
                                 <CustomNavLink exact to="/">Home</CustomNavLink>
                                 <CustomNavLink to="/projects">Projects</CustomNavLink>
+                                <CustomNavLink to="/blogs">Blogs</CustomNavLink>
                                 <CustomNavLink to="/resume">Résumé</CustomNavLink>
                                 {/* <Link className="navbar-item" to="/blogs">Blogs</Link> */}
                                 <a className="navbar-item is-hidden-touch is-hidden-desktop-only" href="https://github.com/kkesley" target="_blank" rel="noopener noreferrer">
