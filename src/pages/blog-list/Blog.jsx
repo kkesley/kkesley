@@ -5,10 +5,12 @@ import BlogItem from 'components/blog-item'
 
 import Spinner from 'components/spinner'
 
+import './Blog.scss' 
+
 const listBlogsQuery = loader('graphql/listBlogs.graphql')
 
 const Blog = () => (
-    <section id="section__tech-stack" className="section">
+    <section id="section__blog-list" className="section">
         <div className="container">
             <Query
                 query={listBlogsQuery} 
@@ -29,15 +31,13 @@ const Blog = () => (
                     if ((items || []).length === 0) return <p>No blogs</p>
                     return (
                         <React.Fragment>
-                            <div className="columns is-multiline">
-                                {
-                                    items.map(blog => (
-                                        <div key={`blog-in-home-${blog.blog_id}`} className="column is-half">
-                                            <BlogItem blog={blog} />
-                                        </div>
-                                    ))
-                                }
-                            </div>
+                            {
+                                items.map(blog => (
+                                    <div className="blog-item" key={`blog-in-home-${blog.blog_id}`}>
+                                        <BlogItem blog={blog} />
+                                    </div>
+                                ))
+                            }
                             {next_token && next_token.length > 0 && (
                                 <div className="container has-text-centered">
                                     <hr />
