@@ -3,7 +3,7 @@ import { Link, MemoryRouter } from 'react-router-dom'
 import { mount } from 'enzyme'
 import Banner from '../Banner'
 
-import ImageBoard from 'assets/board.png'
+import ImageTOA from 'assets/toa.png'
 
 describe('Banner Component', () => {
     let wrapper
@@ -24,7 +24,7 @@ describe('Banner Component', () => {
     })
     it('has the correct image', () => {
         const image = wrapper.find('img').first()
-        expect(image.props().src).toBe(ImageBoard)
+        expect(image.props().src).toBe(ImageTOA)
     })
     it('has correct breadcrumb links', () => {
         const links = wrapper.find(Link)

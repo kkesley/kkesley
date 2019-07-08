@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
 import { Link } from 'react-router-dom'
-import ImageBoard from 'assets/board.png'
+import ImageTOA from 'assets/toa.png'
 
 import './Banner.scss'
 
@@ -26,7 +26,7 @@ const Banner = () => (
                         </div>
                     </div>
                     <div className="column is-half-desktop is-flex hero-image-container">
-                        <img className="hero-image" alt="projects" src={ImageBoard} />
+                        <img className="hero-image" alt="projects" src={ImageTOA} />
                     </div>
                 </div>
             </div>
