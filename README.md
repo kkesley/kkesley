@@ -19,11 +19,14 @@ This is a simple website built on [ReactJS](https://reactjs.org/) w/ [Apollo](ht
 
 ### Pages
 
-Currently, there are only 3 pages in my website
+Currently, there are 6 pages in my website
 
 1. Home
 2. Project List
 3. Project Detail
+4. Blog List
+5. Blog Detail
+6. Resume
 
 Most of the content is static, except projects which are coming from AWS DynamoDB.
 
