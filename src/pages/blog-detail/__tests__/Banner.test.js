@@ -12,11 +12,10 @@ describe('Banner Component', () => {
     )
     beforeEach(() => {
         props = {
-            project: {
+            blog: {
                 title: 'title',
-                year: 'year',
-                poster_url: 'poster.png',
-                project_id: 'id',
+                timestamp: '20190712',
+                blog_id: 'id',
             }
         }
     })
@@ -26,22 +25,17 @@ describe('Banner Component', () => {
             wrapper = makeWrapper(props)
         })
         it('has correct title element', () => {
-            expect(wrapper.find('h1').first().text()).toBe(props.project.title)
+            expect(wrapper.find('h1').first().text()).toBe(props.blog.title)
         })
         it('has correct year element', () => {
-            expect(wrapper.find('h2').first().text()).toBe(props.project.year)
-        })
-        it('has correct poster', () => {
-            const imageProps = wrapper.find('img').first().props()
-            expect(imageProps.src).toBe(props.project.poster_url)
-            expect(imageProps.alt).toBe(props.project.title)
+            expect(wrapper.find('h2').first().text()).toBe('12 Jul 2019')
         })
         it('has correct breadcrumb links', () => {
             const links = wrapper.find(Link)
             expect(links.length).toBe(3)
             expect(links.at(0).props().to).toBe('/')
-            expect(links.at(1).props().to).toBe('/projects')
-            expect(links.at(2).props().to).toBe(`/projects/${props.project.project_id}`)
+            expect(links.at(1).props().to).toBe('/blogs')
+            expect(links.at(2).props().to).toBe(`/blogs/${props.blog.blog_id}`)
         })
     })
     describe('with Partial Information', () => {
