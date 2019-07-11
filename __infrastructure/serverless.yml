@@ -16,7 +16,6 @@ custom:
     dev: www-dev.kkesley.com
     prod: www.kkesley.com
   CERTIFICATE_ARN: arn:aws:acm:us-east-1:344260392803:certificate/6e6ea77e-f76d-4d54-b400-86ac67bbf5d7
-
 resources:
   Resources:
     FrontPageWebsiteBucket:
@@ -25,6 +24,23 @@ resources:
         WebsiteConfiguration:
           IndexDocument: index.html
           ErrorDocument: 404.html
+    FrontPageWebsiteBucketPolicy:
+      Type: AWS::S3::BucketPolicy
+      Properties:
+        Bucket: !Ref FrontPageWebsiteBucket
+        PolicyDocument:
+          Statement:
+            - Effect: Allow
+              Action:
+                - s3:GetObject
+              Resource: !Join [/, [!GetAtt FrontPageWebsiteBucket.Arn, '*']]
+              Principal:
+                CanonicalUser: !GetAtt FrontPageWebsiteOriginAccessIdentity.S3CanonicalUserId
+    FrontPageWebsiteOriginAccessIdentity:
+      Type: AWS::CloudFront::CloudFrontOriginAccessIdentity
+      Properties:
+        CloudFrontOriginAccessIdentityConfig:
+          Comment: Origin Access Identity to Access Website Bucket
     FrontPageCloudFront:
       Type: "AWS::CloudFront::Distribution"
       DependsOn:
@@ -32,12 +48,10 @@ resources:
       Properties:
         DistributionConfig: 
           Origins:
-            - DomainName: !Select [2, !Split ["/", !GetAtt FrontPageWebsiteBucket.WebsiteURL]]
+            - DomainName: !GetAtt FrontPageWebsiteBucket.DomainName
               Id: S3Origin
-              CustomOriginConfig:
-                HTTPPort: '80'
-                HTTPSPort: '443'
-                OriginProtocolPolicy: http-only
+              S3OriginConfig:
+                OriginAccessIdentity: !Join [/, [origin-access-identity, cloudfront, !Ref FrontPageWebsiteOriginAccessIdentity]]
           CustomErrorResponses:
             -
               ErrorCachingMinTTL: 0
