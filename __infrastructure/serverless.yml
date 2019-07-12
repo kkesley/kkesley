@@ -40,7 +40,7 @@ resources:
       Type: AWS::CloudFront::CloudFrontOriginAccessIdentity
       Properties:
         CloudFrontOriginAccessIdentityConfig:
-          Comment: Origin Access Identity to Access Website Bucket
+          Comment: ${self:custom.DOMAIN_NAME.${self:provider.stage}} Origin Access Identity to Access Website Bucket
     FrontPageCloudFront:
       Type: "AWS::CloudFront::Distribution"
       DependsOn:
