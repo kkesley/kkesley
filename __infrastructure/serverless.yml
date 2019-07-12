@@ -53,8 +53,7 @@ resources:
               S3OriginConfig:
                 OriginAccessIdentity: !Join [/, [origin-access-identity, cloudfront, !Ref FrontPageWebsiteOriginAccessIdentity]]
           CustomErrorResponses:
-            -
-              ErrorCachingMinTTL: 0
+            - ErrorCachingMinTTL: 0
               ErrorCode: 403
               ResponseCode: 200
               ResponsePagePath: "/index.html"
