@@ -69,7 +69,7 @@
       "Type": "AWS::CloudFront::CloudFrontOriginAccessIdentity",
       "Properties": {
         "CloudFrontOriginAccessIdentityConfig": {
-          "Comment": "Origin Access Identity to Access Website Bucket"
+          "Comment": "dev.kkesley.com Origin Access Identity to Access Website Bucket"
         }
       }
     },
@@ -114,8 +114,8 @@
             }
           ],
           "Aliases": [
-            "kkesley.com",
-            "www.kkesley.com"
+            "dev.kkesley.com",
+            "www-dev.kkesley.com"
           ],
           "DefaultCacheBehavior": {
             "AllowedMethods": [
@@ -151,7 +151,7 @@
         "HostedZoneName": "kkesley.com.",
         "RecordSets": [
           {
-            "Name": "www.kkesley.com",
+            "Name": "www-dev.kkesley.com",
             "Type": "A",
             "AliasTarget": {
               "HostedZoneId": "Z2FDTNDATAQYW2",
@@ -172,7 +172,7 @@
         "HostedZoneName": "kkesley.com.",
         "RecordSets": [
           {
-            "Name": "kkesley.com",
+            "Name": "dev.kkesley.com",
             "Type": "A",
             "AliasTarget": {
               "HostedZoneId": "Z2FDTNDATAQYW2",
