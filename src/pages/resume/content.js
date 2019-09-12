@@ -53,7 +53,7 @@ export default {
     skills: [{
         section: 'Technical',
         contents: [
-            'Passed AWS Certified Solutions Architect – Associate certification (2019 - 2021)',
+            'Passed AWS Certified Solutions Architect – Associate certification & AWS Certified Developer - Associate (2019 - 2022)',
             'Designed Serverless Architecture to reduce cost and improve scalability using AWS ecosystem.',
             'Developed websites and mobile applications as a full-stack development.',
             'Fluent in front-end development using ReactJS / AngularJS.',
